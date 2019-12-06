@@ -104,6 +104,7 @@ for(let i = 0; i < link.length; i++){
 }
 
 document.querySelector('.fix-btn-back').addEventListener('click', function(){
+	document.querySelector("iframe").style.height = 0 + "%";
 	document.querySelector('.fix-btn-back').style.display = 'none';
 	document.querySelector('.fix-btn-mob').style.display = 'none';
 	document.querySelector('.wrapper').style.display = 'block';
