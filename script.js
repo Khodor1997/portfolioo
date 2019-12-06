@@ -96,6 +96,7 @@ let link = document.querySelectorAll('.link');
 
 for(let i = 0; i < link.length; i++){
 	link[i].addEventListener('click', function(){
+		document.querySelector("iframe").style.height = 100 +"%";
 	document.querySelector('.wrapper').style.display = 'none';
 	document.querySelector('.fix-btn-back').style.display = 'block'
 	document.querySelector('.fix-btn-mob').style.display = 'block'

@@ -1,0 +1,1967 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@black:#000;
+@gold:#E3B873;
+@white:#fff;
+
+@font-face {
+    font-family: 'FuturaDemiC';
+    src: url('../assets/fonts/FuturaDemiC.eot');
+    src: url('../assets/fonts/FuturaDemiC.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/FuturaDemiC.woff2') format('woff2'),
+        url('../assets/fonts/FuturaDemiC.woff') format('woff'),
+        url('../assets/fonts/FuturaDemiC.ttf') format('truetype'),
+        url('../assets/fonts/FuturaDemiC.svg#FuturaDemiC') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FuturaBookC';
+    src: url('../assets/fonts/FuturaBookC.eot');
+    src: url('../assets/fonts/FuturaBookC.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/FuturaBookC.woff2') format('woff2'),
+        url('../assets/fonts/FuturaBookC.woff') format('woff'),
+        url('../assets/fonts/FuturaBookC.ttf') format('truetype'),
+        url('../assets/fonts/FuturaBookC.svg#FuturaBookC') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Yeseva One';
+    src: url('../assets/fonts/YesevaOne.eot');
+    src: url('../assets/fonts/YesevaOne.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/YesevaOne.woff2') format('woff2'),
+        url('../assets/fonts/YesevaOne.woff') format('woff'),
+        url('../assets/fonts/YesevaOne.ttf') format('truetype'),
+        url('../assets/fonts/YesevaOne.svg#YesevaOne') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('../assets/fonts/ProximaNova-Regular.eot');
+    src: url('../assets/fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/ProximaNova-Regular.woff2') format('woff2'),
+        url('../assets/fonts/ProximaNova-Regular.woff') format('woff'),
+        url('../assets/fonts/ProximaNova-Regular.ttf') format('truetype'),
+        url('../assets/fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proxima Nova Lt';
+    src: url('../assets/fonts/ProximaNova-Light.eot');
+    src: url('../assets/fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/ProximaNova-Light.woff2') format('woff2'),
+        url('../assets/fonts/ProximaNova-Light.woff') format('woff'),
+        url('../assets/fonts/ProximaNova-Light.ttf') format('truetype'),
+        url('../assets/fonts/ProximaNova-Light.svg#ProximaNova-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body{
+    font-size: 16px;
+}
+.wrapper{
+    width: 100%;
+    background: #000;
+}
+
+.header{
+    width: 100%; 
+    max-width: 1440px;
+    margin: 0 auto;
+    background: #000;
+    width: 87.2%;
+}
+.main{
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+    background: #000;
+    overflow: hidden;
+    }
+
+
+.container-header{
+    max-width: 1440px;
+    height: 5.1875rem;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.text-company {
+    width: 17%;
+    h1{
+    color: @gold;
+    font-size:0.875rem;
+    text-transform: uppercase;
+    font-family: 'FuturaDemiC';
+}
+}
+.menu{
+    width: 45%;
+    &-header{
+        height: 5.1875rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+            &__item{      
+            text-transform: uppercase;
+            font-size:0.875rem;
+            font-family: 'FuturaBookC';
+            &:last-child{
+                margin-right: 0;
+                }   
+            }
+            &__link {    
+                text-decoration: none;
+                color: @white; 
+                &:hover{
+                    color: @gold;
+                    }
+                &_selected{
+                    text-decoration: none;
+                    color: @gold;
+                    }
+                &_number{
+                    color: @gold; 
+        
+                    }
+                }  
+}
+}
+.btn-number{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 29%;
+}
+.menu-button{
+    float: right ;
+    width:50%;
+    height: 2.3125rem;
+    font-family: 'FuturaDemiC';
+    color: @white;
+    background: @gold;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+       }
+.repair{ 
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    }
+.sidebar{
+    position: relative;
+    width: 5%;
+    height: 44.1875rem;
+    background: @black;
+    &__link{
+        width:11rem;
+        position: absolute;
+        margin-top: 17rem;
+        transform: rotate(90deg);
+        &_inst{
+            margin-top: 6.5rem;
+            display: inline-block;
+            text-transform: uppercase;
+            color: @gold;
+            text-decoration: none;
+            font-family: 'FuturaDemiC';
+            &::after{
+                content: ' ';
+                width: 3.1875rem;
+                height: 0.0625rem;
+                background: @gold;
+                display: inline-block;
+                margin-left: 1rem;
+                vertical-align: middle;
+                }
+            }
+        }
+    }
+.overley-bg{
+    position: absolute;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    z-index: 1;
+    }
+.offer{
+    position: relative;
+    width: 94.5%;
+    height: 44.1875rem;;
+    background: url(../assets/img/offer-bg.jpg);
+    background-size: cover;
+    &-info{
+        margin-top: 12.625rem;
+        margin-left: 3.8125rem;
+        position: relative;
+        z-index: 2;
+        &__header{
+            font-family: 'Yeseva One';
+            font-size: 2.5rem;
+            color:@white;
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: normal;
+            &_gold{
+                color:@gold;
+                }
+            }
+        &__discount{
+            margin-top: 1.1rem;
+            margin-bottom:3.1875rem; 
+            font-weight: 100;
+            line-height: 1.875rem;
+            font-size: 1.375rem;
+            color:@white;
+            font-family: 'FuturaBookC';
+            }
+        .button{
+            width: 12.9375rem;
+            height: 3.1875rem;
+            font-size: 0.9rem;
+            font-family: 'FuturaDemiC';
+            text-transform: uppercase;
+            background: #E3B873;
+            box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
+            border-radius: 2px;
+            border: none;
+            margin-right: 1.7rem;
+            color: @white;
+            cursor:pointer;
+            &:hover{
+                border: 1px solid @white;
+                background-color: transparent;
+                }
+            }
+        }   
+    }
+.button-scroll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        z-index: 4;
+    position: absolute;
+    margin-top: 3rem;
+    bottom: -2rem;
+    width: 15.4375rem;
+    height: 6.0625rem;
+    background: @black;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:@white;
+    span{
+        margin-left: 1rem;
+        position: relative;
+        .button-scroll_arrow{
+            position: absolute;
+            left: 0.55rem;
+            top: 0.75rem;
+        }
+    }
+}
+
+.container-1{
+    // height: 40.625rem;
+    padding-top: 2rem;
+}
+.slide-bar{
+    margin-top:4.5rem;
+    margin-left: 43%;
+    width: 57%;
+    margin-bottom: 2.8125rem;
+}
+.navigation-slider{
+    display: flex;
+    &__item{
+        margin-right: 3.8125rem;
+        list-style: none;
+    }
+    &__link{
+        font-family: 'Yeseva One';
+        font-size: 0.875rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: @white;
+        opacity: .3;
+        &_selected{
+            color: @gold;
+            opacity: 1;
+        }
+        &:hover{
+            color: @gold;
+            opacity: 1;
+        }
+    }
+} 
+
+.slider{
+    margin-left: 7%;
+    display: flex;
+    width: 100%;
+}
+//visible block (mom ver)
+.slider-mob1, .slider-mob2, .slider-mob3{
+    display: none;
+}
+    .info{
+        width: 32%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        &__label{
+        font-family:'Yeseva One';
+        font-size: 27px;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        color: #E3B873;
+        &::after{
+            content: ' ';
+            width: 3.1875rem;
+            height: 0.0625rem;
+            background: @gold;
+            display: inline-block;
+            margin-left: 2rem;
+            vertical-align: middle;
+            }
+        }
+        
+        &__text{
+        font-family: 'FuturaBookC',sans-serif;
+        font-size: 18px;
+        color: #FFFFFF;
+        }
+        &__col-label{
+        font-family:'Yeseva One';
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #E3B873;
+        }
+        &__col-text{
+        font-family: 'FuturaBookC',sans-serif;
+        font-size: 15px;
+        color: #FFFFFF;
+        }
+        .col{
+        width: 50%;
+        
+        }
+    }
+    .completed-projects__button{
+            margin-top: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 13.125rem;
+            &_arrow{
+                font-size: 2.5rem;
+                color: @white; 
+            }
+            .point{
+                cursor: pointer;
+                opacity: .3;
+                &_selected{
+                    opacity: 1;
+                }
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+
+
+.photo-project{
+    margin-left: 3.5%;
+    width: 58%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    &-block1{
+        width: 80%;
+        overflow: hidden;
+    }
+    &-block2{
+        width: 15%;
+        position: relative;
+        &__arrow{
+            top: 0;
+            margin-top: 13rem;
+            margin-left: 20%;
+            width: 3.375rem;
+            height: 3.375rem;
+            border-radius: 50%;
+            background: @gold;
+            position: absolute;
+            display: inline;
+            z-index: 12;
+            box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
+            img{
+                margin-top: 1.15rem;
+                margin-left: 1.4rem;
+            }
+        }
+    }
+
+    
+}
+.video-view{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 5.5rem;
+    width: 100%;
+    background: @black;
+}
+.online-control{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.875rem;
+    &__header{
+        font-family:'Yeseva One';
+        font-size: 1.25rem;
+        color: @white;
+        text-transform: uppercase;
+        font-weight: 200;
+        margin-bottom: 0.5rem;
+    }
+    &__icon{
+        width: 2rem;
+    }
+}
+.header-icon{
+    &::after{
+        content: ' ';
+        width: 2rem;
+        height: 0.0625rem;
+        background: @gold;
+        display: inline-block;
+        margin-left: 0.5rem;
+        margin-bottom: 0.8rem;
+        }
+    &::before{
+        content: ' ';
+        width: 2rem;
+        height: 0.0625rem;
+        background: @gold;
+        display: inline-block;
+        margin-right: 0.5rem;
+        margin-bottom: 0.8rem;
+        }  
+}
+.online-video{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    &-player{
+        z-index: 12;
+        position: relative;
+        width: 56.74%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__overlay{
+            position:absolute;
+            width: 100%;
+            height: 100%;
+            background: @black;
+            z-index: 13;
+            opacity: .8;
+        }
+        &__play{
+        width: 5.3125rem;
+        height: 5.3125rem;
+        border-radius: 50%;
+        background: @gold;
+        position: absolute;
+        display: inline;
+        z-index: 15;
+        display: flex;
+        justify-content: center;
+        &:hover{
+            box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
+        }
+        }
+    }
+    video{
+        width: 100%;
+    }
+}
+.container-2{
+    width: 100%;
+    background: @white;
+    margin-top: -12.5rem;
+    padding-top: 16.3rem;
+}
+.top-border{
+    margin-top: 3.875rem;
+    width: 3.4375rem;
+    border-bottom: 0.1rem solid @gold;
+    margin: 0 auto;
+}
+.live-broadcast{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top:1.875rem;
+    padding-bottom: 9.25rem;
+    &-text{
+        &__info{
+        text-align:center;
+        font-size: 1.25rem;
+        font-family:'FuturaBookC';
+        }
+    }
+    &-form{
+        margin: 0 auto;
+        margin-top: 6.6875rem;
+        width: 56.74%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+}
+.live-broacast-col{
+    width: 33%;
+    &__inp{
+        width: 85%;
+        border: none;
+        border-bottom: 1px solid rgba(000, 0, 0, .3);
+        font-size: 1.3rem;
+        font-family:'FuturaBookC';
+        color: @gold;
+        outline: none;
+        &:focus{
+            border-bottom: 1px solid rgba(000, 0, 0,); 
+        }
+        //add color placeholder
+        &::-webkit-input-placeholder {
+            color: @black;
+            &:focus{
+                color: transparent
+            }
+           } 
+        &::-moz-placeholder {
+            color: @black;
+           }
+           //delet placeholder
+           &:focus::-webkit-input-placeholder {
+            color: transparent
+          }
+           
+          &:focus::-moz-placeholder {
+            color: transparent
+          }
+           
+          &:focus:-moz-placeholder {
+            color: transparent
+          }
+           
+          &:focus:-ms-input-placeholder {
+            color: transparent
+          }
+           
+    }
+    &__text{
+        font-size: 0.9375rem;
+        font-family:'FuturaBookC';
+        span{
+            opacity: .5;
+        }
+    }
+    &__btn{
+        width: 80%;
+        height: 3.1875rem;
+        background: @gold;
+        color: @white;
+        outline: none;
+        border: none;
+        box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
+        border-radius: 2px;
+        font-size: 1rem;
+        font-weight: 200;
+        text-transform: uppercase;
+        font-family: 'FuturaDemiC';
+        cursor: pointer;
+        float: right;
+    }
+    &__radio{
+        margin: 0 auto;
+        margin-top: 2.3125rem;
+        font-family:'FuturaBookC';
+        font-size: 1rem;
+        font-weight: 500;
+        width: 100%;
+        text-align: center;
+        &_chk{
+            transform:scale(1.3);
+            margin-right: 1rem;
+            background-color: @gold;
+        }
+    }
+}
+.container-3{
+    width: 100%;
+    background: @white;
+    padding-bottom: 14rem;
+}
+.repairs{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &__header{
+        font-family:'Yeseva One';
+        font-size: 1.25rem;
+        color: @black;
+        text-transform: uppercase;
+        font-weight: 200;
+        margin-bottom: 0.5rem;
+    }
+    &__icon{
+        width: 2rem;
+    }
+}
+// .types-repair{
+//     width: 85.833%;
+//     height: 60rem;
+//     background: green;
+//     margin: 0 auto;
+//     display: flex;
+//     justify-content: space-between;
+//     &-item{
+//         position: relative;
+//         width: 23rem;
+//         height: 15rem;
+//         background: blue;
+//         img{
+//             width:100%;
+//         }
+//         &-work{
+//             width: 84.18%;
+//             top: 20rem;;
+//             left:50%;
+//             margin-left:-42.9%;
+//             position: absolute;
+//             height: 20rem;;
+//             background: #E3B873;
+//         }
+//     }
+// }
+
+.types-repair{
+    width: 85.833%;
+    background: @white;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 27.5rem;
+    &-item{
+        position: relative;
+        width: 32%;
+        height: 15rem;
+        z-index: 19;
+        img{
+            width:100%;
+        }
+        &-work{
+            width: 84.18%;
+            min-height: 17.875rem;
+            top: -7.9375rem;;
+            left:50%;
+            margin-left:-42.9%;
+            position: relative;
+            background: @white;
+            z-index: 20;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+            padding-top: 1.5rem;
+            h4{
+               font-size: 1.125rem;
+               font-family:'Yeseva One';
+               font-weight: 500;
+               margin-left: 2rem;
+               margin-bottom: 0.7rem;
+            }
+            ul{
+                margin-left: 3rem;
+                li{
+                    font-family:'FuturaBookC';
+                    font-size: 0.9375rem;
+                    margin-bottom: 0.5rem;
+                    color: #959595;
+                }
+            }
+            &__btn{
+                width: 14.25rem;
+                height: 3.375rem;
+                background: @gold;
+                color: @white;
+                outline: none;
+                border: none;
+                box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+                font-size: 1.125rem;
+                font-weight: 200;
+                text-transform: uppercase;
+                font-family:'Yeseva One';
+                cursor: pointer;
+                position: absolute;
+                left: 0;
+                bottom: -1.6875rem;
+            }
+        }
+    }
+}
+.communication{
+    width: 100%;
+    background: url(../assets/img/bg-comm.jpg) no-repeat; 
+}
+.prepaer-works{
+    width: 85.833%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.leave-reques{
+    margin-top: 8rem;
+    width: 41%;
+    height: 31.625rem;
+    background: @black;
+    &__header{
+        margin-top: 1.6875rem;
+        text-align: center;
+        color: @white;
+        font-family: 'FuturaDemiC';
+        font-size: 1.25rem;
+    }
+    &-col{
+        margin-top: 2.5rem;
+        margin-left: 3rem;
+        &__text{
+            font-size: 0.9375rem;
+            font-family:'FuturaBookC';
+            
+            span{
+                color: @white;
+                opacity: .5;
+            }
+        }
+        &__inp{
+            margin-top: 0.5rem;
+            width: 88%;
+            border: none;
+            border-bottom: 1px solid rgba(97, 97, 97, 0.5);
+            font-size: 1.3rem;
+            font-family:'FuturaBookC';
+            color: @gold;
+            background: @black;
+            outline: none;
+            &:focus{
+                border-bottom: 1px solid rgba(255, 255, 255,); 
+            }
+            //add color placeholder
+            &::-webkit-input-placeholder {
+                color: @white;
+                &:focus{
+                    color: transparent
+                }
+               } 
+            &::-moz-placeholder {
+                color: @white;
+               }
+               //delet placeholder
+               &:focus::-webkit-input-placeholder {
+                color: transparent
+              }
+               
+              &:focus::-moz-placeholder {
+                color: transparent
+              }
+               
+              &:focus:-moz-placeholder {
+                color: transparent
+              }
+               
+              &:focus:-ms-input-placeholder {
+                color: transparent
+              }
+               
+        }
+        &__radio{
+            margin-top: 1.3125rem;
+            margin-left: 3rem;
+            font-family:'FuturaBookC';
+            color: @white;
+            font-size: 1rem;
+            font-weight: 500;
+            width: 100%;
+            &_chk{
+                transform:scale(1.3);
+                margin-right: 1rem;
+                background-color: @gold;
+            }
+        }
+        &__btn{
+            width: 13.3125rem;
+            height: 3.1875rem;
+            background: @gold;
+            color: @white;
+            outline: none;
+            border: none;
+            border-radius: 2px;
+            font-size: 1rem;
+            font-weight: 200;
+            text-transform: uppercase;
+            font-family: 'FuturaDemiC';
+            cursor: pointer;
+            float: right;
+            margin-right: 3rem;
+        }
+    }
+}
+
+.free-services{
+    width: 59%;
+    padding-top: 8rem;
+    &-advantages{
+        margin-bottom: 4.875rem;
+        height: 2.625rem;
+        font-family: 'FuturaBookC';
+        font-size: 1.125rem;
+        &:first-child{
+            margin-left: 14.5rem;
+        }
+        &:nth-child(2){
+            line-height: 2.625rem;
+            margin-left: 18.5rem;
+            margin-bottom: 7.4375rem;
+        }
+        &:nth-child(3){
+            line-height: 2.625rem;
+            margin-left: 20rem;
+        }
+        &:last-child{
+            margin-left: 16rem;
+        }
+        span{
+            float: left;
+            margin-right: 1rem;
+            display: inline-block;
+            text-align: center;
+            line-height: 2.625rem;
+            width: 2.625rem;
+            height: 2.625rem;
+            background: @gold;
+            border-radius: 50%;
+            font-size: 1.125rem;
+            font-family:'Yeseva One';
+            color: @white;
+            
+        }
+    }
+
+}
+.help-save{
+    width: 85.833%;
+    margin: 0 auto;
+    height: 8.125rem;
+}
+.save-cost{
+    width: 41%;
+    float: right;
+    height: 8.125rem;
+    &-pig{
+        float: left;
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        display: inline-block;
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 50%;
+        background: @gold;
+        position: relative;
+        .pig-icon{
+            margin-top: 1rem;
+            margin-left: 1rem;
+        }
+        .doll-icon{
+            position: absolute;
+            right: 2.1rem;
+            top: 1.7rem;
+        }
+    }
+    &-help{
+        display: block;
+        font-family: 'FuturaDemiC';
+        font-size: 1.25rem;
+        width: 13.75rem;
+        height: 4.5rem;
+        margin-top: 1.5rem;
+        margin-right: 8rem;
+        float:right;
+        color: @gold;
+    }
+}
+
+.container-4{
+    width: 100%;
+    background: url(../assets/img/room-bg.jpg);
+    position: relative;
+}
+.color-bg{
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: .8;
+    z-index: 1;
+    position: absolute;
+}
+
+.fantasies{
+    width: 85.833%;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    
+
+    &-style{
+        width: 36%;
+        &__header{
+            margin-top: 8.3125rem;
+            margin-bottom: 3rem;
+            font-size: 1.6875rem;
+            text-transform: uppercase;
+            color: @gold;
+        }
+        &__list{
+            list-style: none;
+        }
+        &__link{
+            line-height: 3rem;
+            font-family: 'Proxima Nova Lt';
+            font-size: 1.25rem;
+            color: @white;
+            text-decoration: none;
+            font-weight: 100;
+            &_active{
+                color: @gold;
+                text-decoration: underline;
+            }
+            &:hover{
+                color: @gold;
+                text-decoration: underline;
+            }
+        }
+    }
+    &-photo{
+        width: 64%;
+        position: relative;
+        &__img1{
+            width: 47%;
+            position: absolute;
+            top: -2.5rem;
+            left: 0;
+            height: auto;
+            height: 65%;
+        }
+        &__img2{
+            width: 47%;
+            position: absolute;
+            top: -12%;
+            right: 0;
+        }
+        &__img3{
+            width: 47%;
+            position: absolute;
+            bottom: -2.5rem;
+            left: 0;
+        }
+        &__img4{
+            width: 47%;
+            position: absolute;
+            bottom: 2.5rem;
+            right:0;
+            height: 71%;
+        }
+    }
+}
+.container-5{
+    width: 100%;
+    background: @white;
+    height: 54rem;
+    padding-top: 14rem;
+}
+
+.design{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &__header{
+        font-family:'Yeseva One';
+        font-size: 1.25rem;
+        color: @black;
+        text-transform: uppercase;
+        font-weight: 200;
+        margin-bottom: 0.5rem;
+    }
+    &__icon{
+        width: 2rem;
+    }
+    &__text{
+        margin-top: 1.5rem;
+        font-family: 'FuturaBookC';
+        font-size: 1.25rem;
+        text-align: center;
+    }
+}
+.bg-design{
+    width: 100%;
+    height: 99%;
+    opacity: .3;
+    background: @black;
+    position: absolute;
+}
+.types-design{
+    width: 85.833%;
+    background: @white;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 27.5rem;
+    &-item{
+        position: relative;
+        width: 32%;
+        z-index: 19;
+        img{
+            width:100%;
+        }
+        &-work{
+            width: 84.18%;
+            top: 70%;
+            left:50%;
+            margin-left:-42.9%;
+            position: absolute;
+            background: @white;
+            z-index: 20;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+            padding-top: 1.5rem;
+            padding-bottom: 3.5rem;
+            h4{
+               font-size: 1.125rem;
+               font-family:'Yeseva One';
+               font-weight: 500;
+               margin-left: 2rem;
+               margin-bottom: 0.7rem;
+            }
+            ul{
+                margin-left: 3rem;
+                li{
+                    font-family:'FuturaBookC';
+                    font-size: 0.9375rem;
+                    margin-bottom: 0.5rem;
+                    color: #959595;
+                }
+            }
+            &__btn{
+                width: 14.25rem;
+                height: 3.375rem;
+                background: @gold;
+                color: @white;
+                outline: none;
+                border: none;
+                box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+                font-size: 1.125rem;
+                font-weight: 200;
+                text-transform: uppercase;
+                font-family:'Yeseva One';
+                cursor: pointer;
+                position: absolute;
+                left: 0;
+                bottom: -1.6875rem;
+                color: #000;
+            }
+        }
+    }
+}
+@media (min-width: 1439px){
+        .fantasies-photo__img1{
+            height: 58%;
+        }
+        .fantasies-photo__img4{
+            height: 65%;
+        }
+    }
+@media (max-width: 1150px){
+    .container-4{
+        padding-bottom: 3rem;
+    }
+    .fantasies-photo{
+        &__img1{
+            top: 2.5rem;
+            height: 52%;
+        }
+        &__img2{
+            top: 2.5rem;
+        }
+        &__img3{
+            bottom: 2.5rem;
+        }
+        &__img4{
+            bottom: 2.5rem;
+            height: 60%;
+        }
+    }
+}
+
+
+
+
+@media (max-width: 1000px){
+    .text-company {
+        width: 20%;
+    }
+    .menu{
+        width: 55%;
+    }
+    .btn-number{
+        flex-direction: column;
+        width: 20%;
+    }
+    .menu-button{
+        display: none;    
+    }
+
+    .sidebar{
+        &__link{
+            &_inst{
+                margin-top: 8rem;
+            }
+        }
+    }
+    .container-2{
+        margin-top: -8rem;
+        padding-top: 12rem;
+    }
+    .container-3{
+        padding-bottom: 3rem;
+    }
+
+    .live-broadcast{
+        &-form{
+            width: 72%;
+        }
+    }
+    .types-repair{
+        padding-bottom: 12.5rem;
+        &-item{
+            &-work{
+                padding-top: 0.7rem;
+                min-height: 14.5rem;
+                h4{
+                   margin-left: 1rem;
+                }
+                ul{
+                    margin-left: 1.5rem;
+                    li{
+                        margin-bottom: 0.4rem;
+                    }
+                }
+                &__btn{
+                    width: 80%;
+                    height: 2rem;
+                    font-size: 0.85rem;
+                    bottom: -1rem;
+                }
+            }
+        }
+    }
+    .free-services{
+        &-advantages{
+            &:first-child{
+                margin-left: 12%;
+                margin-bottom: 3rem;
+            }
+            &:nth-child(2){
+                line-height: 2.625rem;
+                margin-left: 12%;
+                margin-bottom: 3rem;
+            }
+            &:nth-child(3){
+                line-height: 2.625rem;
+                margin-left: 12%;
+                margin-bottom: 3rem;
+            }
+            &:last-child{
+                margin-left: 12%;
+                margin-bottom: 3rem;
+            }
+        }
+    
+    }
+    .help-save{
+        width: 85.833%;
+        margin: 0 auto;
+        height: 8.125rem;
+    }
+    .save-cost{
+        width: 41%;
+        float: right;
+        height: 8.125rem;
+        &-pig{
+            float: left;
+            margin-left: 0rem;
+            margin-right: 0.5rem;
+            display: inline-block;
+        }
+        &-help{
+            font-size: 1.15rem;
+            width: 68%;
+            height: 4.5rem;
+            margin-top: 1.5rem;
+            margin-right: 0.5rem;
+            float:right;
+            color: @gold;
+        }
+    }
+    .leave-reques{
+        &-col{
+            &__btn{
+                float: none;
+                margin-right: 0rem;
+            }
+        }
+    }
+    .fantasies{
+        &-style{
+            width: 36%;
+            &__header{
+                margin-top: 2.3125rem;
+                margin-bottom: 1rem;
+            }
+            &__link{
+                line-height: 2.5rem;
+            }
+        }
+        &-photo{
+            &__img1{
+                height: 55%;
+            }
+            &__img2{
+                height: 32%;
+            }
+            &__img3{
+                height: 32%;
+                bottom: 0;
+            }
+            &__img4{
+                height: 55%;
+                bottom: 0;
+            }
+        }
+    }
+    .container-5{
+        padding-top: 3rem;
+    }
+    .types-design{
+        &-item{
+            &-work{
+                padding-top: 0.7rem;
+                padding-bottom: 1rem;
+                h4{
+                   margin-left: 1rem;
+                }
+                ul{
+                    margin-left: 1.5rem;
+                    li{
+                        margin-bottom: 0.4rem;
+                    }
+                }
+                &__btn{
+                    width: 80%;
+                    height: 2rem;
+                    font-size: 0.85rem;
+                    bottom: -1rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 800px){
+    header{
+        width: 94%;
+    }
+    .container-header{
+        height: 3.5rem;
+    }
+    .text-company {
+        width: 50%;
+    }
+    .menu{
+        display: none;
+    }
+    .btn-number{
+        width: 35%;
+    }
+    .menu-button{
+        display: none;
+    }
+
+    .repair{ 
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        }
+    .sidebar{
+        display: none;
+        }
+    .offer{
+        width: 94.5%;
+        height: 40rem;;
+        &-info{
+            margin:0rem 2rem;
+            margin-top: 10rem;
+            &__header{
+                font-size: 2.2rem;
+                }
+            }   
+        }
+    .button-scroll{
+        height: 4.0625rem;
+    }
+
+.container-2{
+    width: 100%;
+    background: @white;
+    margin-top: -12.5rem;
+    padding-top: 16.3rem;
+}
+.top-border{
+    margin-top: 3.875rem;
+    width: 3.4375rem;
+    border-bottom: 0.1rem solid @gold;
+    margin: 0 auto;
+}
+.live-broadcast{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top:1.875rem;
+    padding-bottom: 9.25rem;
+    &-text{
+        &__info{
+        text-align:center;
+        font-size: 1.25rem;
+        font-family:'FuturaBookC';
+        }
+    }
+    &-form{
+        margin: 0 auto;
+        margin-top: 6.6875rem;
+        width: 56.74%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+}
+.live-broacast-col{
+    width: 33%;
+    &__inp{
+        width: 85%;
+        border: none;
+        border-bottom: 1px solid rgba(000, 0, 0, .3);
+        font-size: 1.3rem;
+        font-family:'FuturaBookC';
+        color: @gold;
+        outline: none;
+        &:focus{
+            border-bottom: 1px solid rgba(000, 0, 0,); 
+        }
+        //add color placeholder
+        &::-webkit-input-placeholder {
+            color: @black;
+            &:focus{
+                color: transparent
+            }
+           } 
+        &::-moz-placeholder {
+            color: @black;
+           }
+           //delet placeholder
+           &:focus::-webkit-input-placeholder {
+            color: transparent
+          }
+           
+          &:focus::-moz-placeholder {
+            color: transparent
+          }
+           
+          &:focus:-moz-placeholder {
+            color: transparent
+          }
+           
+          &:focus:-ms-input-placeholder {
+            color: transparent
+          }
+           
+    }
+    &__text{
+        font-size: 0.9375rem;
+        font-family:'FuturaBookC';
+        span{
+            opacity: .5;
+        }
+    }
+    &__btn{
+        width: 80%;
+        height: 3.1875rem;
+        background: @gold;
+        color: @white;
+        outline: none;
+        border: none;
+        box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
+        border-radius: 2px;
+        font-size: 1rem;
+        font-weight: 200;
+        text-transform: uppercase;
+        font-family: 'FuturaDemiC';
+        cursor: pointer;
+        float: right;
+    }
+    &__radio{
+        margin: 0 auto;
+        margin-top: 2.3125rem;
+        font-family:'FuturaBookC';
+        font-size: 1rem;
+        font-weight: 500;
+        width: 100%;
+        text-align: center;
+        &_chk{
+            transform:scale(1.3);
+            margin-right: 1rem;
+            background-color: @gold;
+        }
+    }
+}
+.container-1{
+    // height: 40.625rem;
+    padding: 10% 4% 0% 4%;
+}
+.info__label{
+    font-size: 1.375rem;
+    padding-bottom: 2rem;
+}
+.info__text{
+    font-size: 0.885rem;
+}
+.slide-bar{
+    display: none;
+}
+
+.slider{
+    margin: 0;
+    display: flex;
+}
+.slider-mob1{
+    overflow: hidden;
+    width: 65%;
+    display: inline-block;
+    height: 15.3125rem;
+    img{
+        height: 15.3125rem;
+        width: 100%;
+    }
+}
+.slider-mob3{
+    display: none;
+}
+.slider-mob2{
+    position: relative;
+    margin-left: 5%;
+    overflow: hidden;
+    width: 30%;
+    display: inline-block;
+    height: 15.3125rem;
+    &_img{
+        height: 15.3125rem;
+    }
+    &__arrow{
+        top: 0;
+        right: 0;
+        margin-top: 6rem;
+        margin-right: 1rem;
+        width: 3.375rem;
+        height: 3.375rem;
+        border-radius: 50%;
+        background: @gold;
+        position: absolute;
+        display: inline;
+        z-index: 12;
+        box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
+        img{
+            margin-top: 1.15rem;
+            margin-left: 1.4rem;
+        }
+    }
+}
+
+.info{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    &__label{
+    padding-bottom: 2.5rem;
+    text-align: center;  
+    &::after{
+        display: none;
+        }
+    } 
+    &__text{
+    margin-bottom: 3rem;
+    width: 92%;
+    text-align: center;
+    }
+    .col{
+    margin-top: 3rem;
+    width: 50%;
+    
+    }
+}
+.completed-projects__button{
+    display: none;
+}
+.online-control{
+    &__header{
+        margin-bottom: 1.5rem;
+    }
+}
+
+.photo-project{
+    display: none;   
+}
+.online-video{
+    &-player{
+        width: 100%;
+    }
+    video{
+        width: 100%;
+    }
+}
+
+.container-2{
+    background: @black;
+    padding-bottom: 3rem;
+}
+.live-broadcast{
+    padding: 0% 4%;
+    &-text{
+        &__info{
+        color: @white;
+        }
+    }
+    &-form{
+        color: @white;
+        background: @black;
+        width: 100%;
+    }
+}
+.live-broacast-col{
+    width: 33%;
+    &__inp{
+        font-size: 1.1rem;
+        width: 85%;
+        border-bottom: 1px solid rgba(97, 97, 97, 0.5);
+        background: @black;
+        &:focus{
+            border-bottom: 1px solid rgba(255, 255, 255,); 
+        }
+        //add color placeholder
+        &::-webkit-input-placeholder {
+            color: @white;
+           } 
+        &::-moz-placeholder {
+            color: @white;
+           }     
+    }
+
+    &__text{
+        font-size: 0.9375rem;
+        font-family:'FuturaBookC';
+        span{
+            opacity: .5;
+        }
+    }
+    &__btn{
+        width: 90%;
+        height: 2.5rem;
+    }
+}
+
+.container-3{
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+}
+
+.types-repair{
+    width: 92%;
+    margin-top: 2rem;
+    flex-direction: column;
+    padding-bottom: 0;
+    &-item{
+        margin: 0 auto;
+        width: 72%;
+        height: 15rem;
+        padding-bottom: 70%;
+        &-work{
+            width: 84.18%;
+            &__btn{
+                width: 80%;
+                height: 2rem;
+                font-size: 0.85rem;
+                bottom: -1rem;
+            }
+        }
+    }
+}
+
+.leave-reques{
+    &-col{
+        &__btn{
+            float: none;
+            margin-right: 0rem;
+        }
+    }
+}
+.communication{
+    display: none;
+    width: 100%;
+    background: url(../assets/img/bg-comm.jpg) no-repeat; 
+}
+
+.fantasies{
+    width: 92%;
+    &-style{
+        width: 36%;
+        &__header{
+            font-size: 1.3rem;
+            margin-top: 2.3125rem;
+            margin-bottom: 1rem;
+        }
+        &__link{
+            line-height: 2rem;
+            font-size: 1rem;
+        }
+    }
+    &-photo{
+        &__img1{
+            height: 45%;
+        }
+        &__img2{
+            height: 22%;
+        }
+        &__img3{
+            height: 22%;
+            bottom: 20%;
+        }
+        &__img4{
+            height: 45%;
+            bottom: 20%;
+        }
+    }
+}
+}
+@media (max-width: 376px){
+    header{
+        width: 95%;
+    }
+    .container-header{
+        height: 3.5625rem;
+    }
+    .text-company {
+        width: 65%;
+        h1{
+            font-size: 0.75rem;
+        }
+
+    }
+    .btn-number{
+        width: 35%;
+    }
+    .menu-header__link_number{
+        color: @white;
+        text-decoration: none;
+        font-size: 0.75rem;
+        font-family: 'FuturaDemiC';
+    }
+    .sidebar{
+        display: none;
+        }
+    .offer{
+        width: 100%;
+        height: 29.75rem;
+        &-info{
+            margin:0% 4%;
+            margin-top: 5.3125rem;
+            &__header{
+                font-size: 1.4375rem;
+                }
+            &__discount{
+                width: 85%;
+                margin-bottom:2rem; 
+                line-height: 1.5rem;
+                font-size: 1.125rem;
+                br{
+                    display: none;
+                }
+            }
+            .button{
+                width: 100%;
+                margin-bottom: 1.625rem;
+                height: 3.1875rem;
+
+                &:hover{
+                    border: 1px solid @white;
+                    background-color: transparent;
+                    }
+                }
+            .button-init{
+                background-color: transparent;
+                border: 1px solid @white;
+            }
+            }   
+        }
+    .button-scroll{
+        display: none;
+    }
+
+    .slider-mob3{
+        position: relative;
+        margin-left: 0%;
+        overflow: hidden;
+        width: 100%;
+        display: inline-block;
+        height: 15.3125rem;
+        &_img{
+            height: 15.3125rem;
+        }
+        &__arrow{
+            top: 0;
+            right: 0;
+            margin-top: 6rem;
+            margin-right: 1rem;
+            width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 50%;
+            background: @gold;
+            position: absolute;
+            display: inline;
+            z-index: 12;
+            box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
+            img{
+                width: 0.6rem;
+                margin-top: 0.65rem;
+                margin-left: 1rem;
+            }
+            &__left{
+                left: 0;
+                margin-left: 1rem;
+                img{
+                    width: 0.6rem;
+                    transform: rotate(180deg);
+                    margin-left: 0.7rem;
+                }
+            }
+        }
+    }
+    .slider-mob1, .slider-mob2,{
+        display: none;
+    }
+    .info{
+        &__col{
+            &-label{
+                margin-bottom: 0.5rem;
+                font-size: 0.875rem;
+            } 
+            &-text{
+            font-size: 0.875rem;
+            margin-bottom: 0rem;
+            }
+        }
+        .col{
+        margin-top: 2rem;
+        }
+    }
+    .completed-projects__button{
+        display: none;
+    }
+    .video-view{
+        margin-top: 3.6875rem;
+    }
+    .online-control{
+        &__header{
+            margin-bottom: 1.5rem;
+            font-size: 1.375rem;
+        }
+    }
+    
+    .photo-project{
+        display: none;   
+    }
+    .online-video{
+        &-player{
+            width: 100%;
+            &__play{
+                width: 2.3125rem;
+                height: 2.3125rem;
+                img{
+                    width: 0.65rem;
+                }
+            }
+        }
+    }
+    .container-2{
+        padding-top: 14.5rem;
+        padding-bottom: 0rem;
+    }
+    .live-broadcast{
+        padding: 0% 4%;
+        &-text{
+            &__info{
+                font-size: 0.875rem;
+            br{
+                display: none;
+            }
+            }
+        }
+        &-form{
+            margin-top: 2rem;
+            width: 100%;
+        }
+    }
+    .live-broacast-col{
+        width: 100%;
+        &:nth-child(1){
+            margin-bottom: 2.5em;
+        }
+        &:nth-child(2){
+            margin-bottom: 2.5em;
+        }
+        &__inp{
+            font-size: 1.1rem;
+            width: 100%;
+        }
+        &__text{
+            font-size: 0.9375rem;
+            span{
+                opacity: .5;
+            }
+        }
+        &__cl{
+            width: 100%;
+            order: 2;
+            position: relative;
+        }
+        &__btn{
+            position: absolute;
+            margin-top: -1.55rem;
+            width: 100%;
+            height: 3.1875rem;
+        }
+        &__radio{
+            margin-bottom: 3.8125rem;
+            order: 1;
+            margin-top: -1.5rem;
+            text-align: left;
+        }
+    }
+    .repairs{
+        margin-top: 2rem;
+    }
+    .types-repair{
+        width: 92%;
+        margin-top: 2rem;
+        flex-direction: column;
+        &-item{
+            margin-bottom: 3.25rem;
+            width: 100%;
+            padding-bottom: 75%;
+            &-work{
+                min-height: 13rem;
+                left: -1px;
+                margin-left: 0;
+                padding-top: 1.5rem;
+                h4{
+                   font-size: 0.9375rem;
+                   margin-left: 2rem;
+                }
+                ul{
+                    margin-left: 3rem;
+                    li{
+                        font-size: 0.8125rem;
+                        margin-bottom: 0.5rem;
+                    }
+                }
+                &__btn{
+                    width: 11.875rem;
+                    height: 2.5rem;
+                    font-size: 0.9375rem;
+                    left: 0;
+                    bottom: -1.3875rem;
+                }
+            }
+        }
+    }
+    .fantasies-style__list{
+        display: none;
+    }
+    .fantasies-photo{
+        display: none;
+    }
+    .container-4{
+        background: @white; 
+        margin-top: -8rem;
+    }
+    .color-bg{
+        background: @white;
+    }
+    
+    .fantasies{
+        width: 92%;
+        background: @white;  
+        &-style{
+            width: 100%;
+            &__header{
+                text-align: center;
+                margin-top: 3.625rem;
+                margin-bottom: 2rem;
+                font-size: 1.375rem;
+            }
+        }
+
+    }
+}
